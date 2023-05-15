@@ -15,7 +15,8 @@
   "types": "index.d.ts",
   "scripts": {
     "build": "father-build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install": "npm run build"
   },
   "repository": {
     "type": "git",
