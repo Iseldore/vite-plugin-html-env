@@ -83,7 +83,7 @@ const getEnvConfig = (envDir = '') => {
 const DEFAULT_CONFIG = {
   prefix: '<{',
   suffix: '}>',
-  envPrefixes: 'VITE_',
+  envPrefixes: 'SLB_',
   compiler: true,
   enforce: null,
   compress: false,
@@ -108,7 +108,7 @@ function vitePluginHtmlEnv (config) {
       
       // Load system environment variables, supporting deploy services like Netlify
       Object.keys(process.env).forEach(key => {
-        if (key.startsWith(envPrefixes || 'VITE_')) {
+        if (key.startsWith(envPrefixes || 'SLB_')) {
           ctxEnvConfig[key] = process.env[key]
         }
       })
